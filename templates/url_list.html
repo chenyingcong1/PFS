@@ -1,0 +1,74 @@
+{% extends 'base.html'%}
+{% block main_content %}
+<table class="table">
+
+
+    <div class="panel-group" id="accordion">
+	    <div class="panel panel-default">
+		    <div class="panel-heading">
+			    <h4 class="panel-title">
+				    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">CUTV系统</a>
+			    </h4>
+		    </div>
+		    <div id="collapseOne" class="panel-collapse collapse in">
+			    <div class="panel-body">
+                    <a href="http://cls.cutv.com/live/admin/login/">CUTV直播管理系统</a>|
+                    <a href="https://10.20.100.2:8888/">array100.2</a>|
+                    <a href="https://10.20.100.3:8888/">array100.3</a>|
+                    <a href="http://192.168.1.109">Zabbix监控</a>|
+                    <a href="http://192.168.3.248/phpipam/">IPAM地址管理</a>|
+                    <a href="http://10.20.100.86/tools/decoder.swf">PID解码</a>|
+                    <a href="http://ping.cutv.com/cgi-bin/smokeping.cgi">SomkePing</a>|
+                    <a href="http://www.cutv.com/demo/live_test.swf">播放器</a>|
+                    <a href="http://10.20.120.64:888/cms/index.jsp">汕头tideCMS9.0</a>
+			    </div>
+		    </div>
+	    </div>
+        <div class="panel panel-default">
+		    <div class="panel-heading">
+			    <h4 class="panel-title">
+				    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">防火墙</a>
+			    </h4>
+		    </div>
+		    <div id="collapseTwo" class="panel-collapse collapse">
+			    <div class="panel-body">
+				    <a href="https://192.168.1.243/login.html">IPS天清入侵防御系统</a>|
+                    <a href="https://192.168.1.235/login.php">深信服WAF</a>|
+                    <a href="https://192.168.9.1">迪普防火墙</a>|
+                    <a href="https://10.20.200.68:8083">imperva</a>|
+                    <a href="https://113.105.76.242:8443/">云平台防火墙</a>
+			    </div>
+		    </div>
+	    </div>
+        <div class="panel panel-default">
+		    <div class="panel-heading">
+			    <h4 class="panel-title">
+				    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">云平台</a>
+			    </h4>
+		    </div>
+		    <div id="collapseThree" class="panel-collapse collapse">
+			    <div class="panel-body">
+				    <a href="https://113.105.76.242:18002">云平台Agile Controller</a>|
+                    <a href="http://10.1.37.23/">索贝CMOP</a>
+			    </div>
+		    </div>
+	    </div>
+        <div class="panel panel-default">
+		    <div class="panel-heading">
+			    <h4 class="panel-title">
+				    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">VPN</a>
+			    </h4>
+		    </div>
+		    <div id="collapseFour" class="panel-collapse collapse">
+			    <div class="panel-body">
+				    <a href="https://10.20.100.5:4430">深信服VPN</a>|
+                    <a href="https://113.105.76.242/">华为VPN</a>|
+                    <a href="https://10.20.100.8:8888/">arrayVPN</a>
+
+			    </div>
+		    </div>
+	    </div>
+    </div>
+
+</table>
+{% endblock %}

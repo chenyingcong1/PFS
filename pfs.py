@@ -10,6 +10,10 @@ DB_Feedback = r'.\db\feedback.db'
 def home_page():
     return render_template('base.html')
 
+@app.route("/url_list/")
+def url_table():
+    return render_template('url_list.html')
+
 @app.route("/feedback/")
 def feedback():
     conn = sqlite3.connect(DB_Feedback)
