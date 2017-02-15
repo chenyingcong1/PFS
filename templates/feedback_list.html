@@ -2,7 +2,15 @@
 
 {% block main_content %}
 <div class="row">
-    <table class="table table-hover">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <form action="#" class="form-inline">
+            <input type="text"class="form-control" name="key" id="key">
+            <input type="submit" class="btn btn-default" value="搜索">
+            </form>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover">
         <thead>
             <tr>
                 <th>ID</th>
@@ -40,5 +48,7 @@
         {% endfor %}
 
     </table>
+        </div>
+    </div>
 </div>
 {% endblock %}

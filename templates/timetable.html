@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block main_content %}
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>值班表上传</h4>
+        </div>
+        <div class="panel-body">
+            <form method="post" enctype=multipart/form-data class="well form-inline">
+                <input type=file name=timetable class="input-small">
+                <input type=submit value=上传 class="input-small">
+            </form>
+        </div>
+        <div>
+            <hr>
+            {% for timetable in files_list %}
+                -{{ timetable }}
+                <a href="{{ url_for('timetable_download', filename=timetable,type="download") }}">下载</a>
+                <a href="{{ url_for('timetable_download', filename=timetable,type='del') }}">删除</a><br>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

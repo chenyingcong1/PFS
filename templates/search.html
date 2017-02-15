@@ -6,9 +6,10 @@
             <div class="panel-heading">
                 <h4>问题反馈</h4>
             </div>
-            <fieldset disabled>
+
                 <div class="panel-body">
                     <form action="#" method="post" class="form-horizontal">
+                    <fieldset disabled>
                         <div class="form-group">
                             <label for="subject" class="control-label col-md-2">主题</label>
                             <div class="col-md-4">
@@ -69,13 +70,14 @@
                                 <input type="text" value="{{ item[10] }}" id="releasetime" name="releasetime">
                             </div>
                         </div>
-
+                    </fieldset>
                         <div class="col-md-offset-2">
                             <a href="{{ url_for('feedback_list') }}" class="btn btn-default">返回列表</a>
                         </div>
+
                     </form>
                 </div>
-            </fieldset>
+
             <div class="panel-footer"></div>
         </div>
     </div>

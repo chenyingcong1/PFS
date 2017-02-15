@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% block main_content %}
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>假日、法定节日加班单</h4>
+        </div>
+        <div class="panel-body">
+            <form action="{{ url_for('post_sheet') }}"  method="post" class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <input type="hidden"  value="hotsheet" class="form-control" id="sheet" name="sheet">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name1" class="control-label col-md-1 ">姓名</label>
+                    <div class="col-md-2 ">
+                        <input type="text" class="form-control" id="name1" name="name1">
+                    </div>
+                    <label for="position1" class="control-label col-md-1 ">部门</label>
+                    <div class="col-md-2 ">
+                        <input type="text" class="form-control" id="position1" name="position1">
+                    </div>
+                    <label for="dtp_input3" class="col-md-2 control-label">安排加班日期</label>
+                    <input size="10" type="text" id="datetimeStart1" name="datetimeStart1" readonly class="form_datetime">
+                    --
+                    <input size="10" type="text" id="datetimeEnd1" name="datetimeEnd1" readonly class="form_datetime">
+                </div>
+                <div class="form-group">
+                    <label for="name2" class="control-label col-md-1 ">姓名</label>
+                    <div class="col-md-2 ">
+                        <input type="text" class="form-control" id="name2" name="name2">
+                    </div>
+                    <label for="position2" class="control-label col-md-1 ">部门</label>
+                    <div class="col-md-2 ">
+                        <input type="text" class="form-control" id="position2" name="position2">
+                    </div>
+                    <label for="dtp_input3" class="col-md-2 control-label">安排加班日期</label>
+                    <input size="10" type="text" id="datetimeStart2" name="datetimeStart2" readonly class="form_datetime">
+                    --
+                    <input size="10" type="text" id="datetimeEnd2" name="datetimeEnd2" readonly class="form_datetime">
+                </div>
+                <div class="form-group">
+                    <label for="name3" class="control-label col-md-1 ">姓名</label>
+                    <div class="col-md-2 ">
+                        <input type="text" class="form-control" id="name3" name="name3">
+                    </div>
+                    <label for="position3" class="control-label col-md-1 ">部门</label>
+                    <div class="col-md-2 ">
+                        <input type="text" class="form-control" id="position3" name="position3">
+                    </div>
+                    <label for="dtp_input3" class="col-md-2 control-label">安排加班日期</label>
+                    <input size="10" type="text" id="datetimeStart3" name="datetimeStart3" readonly class="form_datetime">
+                    --
+                    <input size="10" type="text" id="datetimeEnd3" name="datetimeEnd3" readonly class="form_datetime">
+                </div>
+                <div class="form-group">
+                    <label for="name4" class="control-label col-md-1 ">姓名</label>
+                    <div class="col-md-2 ">
+                        <input type="text" class="form-control" id="name4" name="name4">
+                    </div>
+                    <label for="position4" class="control-label col-md-1 ">部门</label>
+                    <div class="col-md-2 ">
+                        <input type="text" class="form-control" id="position4" name="position4">
+                    </div>
+                    <label for="dtp_input3" class="col-md-2 control-label">安排加班日期</label>
+                    <input size="10" type="text" id="datetimeStart4" name="datetimeStart4" readonly class="form_datetime">
+                    --
+                    <input size="10" type="text" id="datetimeEnd4" name="datetimeEnd4" readonly class="form_datetime">
+                </div>
+                <div class="form-group">
+                    <label for="name5" class="control-label col-md-1 ">姓名</label>
+                    <div class="col-md-2 ">
+                        <input type="text" class="form-control" id="name5" name="name5">
+                    </div>
+                    <label for="position5" class="control-label col-md-1 ">部门</label>
+                    <div class="col-md-2 ">
+                        <input type="text" class="form-control" id="position5" name="position5">
+                    </div>
+                    <label for="dtp_input3" class="col-md-2 control-label">安排加班日期</label>
+                    <input size="10" type="text" id="datetimeStart5" name="datetimeStart5" readonly class="form_datetime">
+                    --
+                    <input size="10" type="text" id="datetimeEnd5" name="datetimeEnd5" readonly class="form_datetime">
+                </div>
+                <div class="form-group">
+                    <label for="name5" class="control-label col-md-1 ">加班事由及地点</label>
+                    <div class="col-md-6">
+                        <textarea name="thing" id="thing" cols="75" rows="3"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" class="btn btn-primary" value="生成">
+                    <input type="reset" class="btn btn-default" value="重置">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <script type="text/javascript">
+        $('#datetimeStart1').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            language: 'zh-CN',
+            todayBtn:true
+        });
+
+        $('#datetimeEnd1').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            language: 'zh-CN',
+        });
+
+        $('#datetimeStart2').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            language: 'zh-CN',
+            todayBtn:true
+        });
+
+        $('#datetimeEnd2').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            language: 'zh-CN',
+        });
+
+        $('#datetimeStart3').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            language: 'zh-CN',
+            todayBtn:true
+        });
+
+        $('#datetimeEnd3').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            language: 'zh-CN',
+        });
+
+        $('#datetimeStart4').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            language: 'zh-CN',
+            todayBtn:true
+        });
+
+        $('#datetimeEnd4').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            language: 'zh-CN',
+        });
+
+        $('#datetimeStart5').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            language: 'zh-CN',
+            todayBtn:true
+        });
+
+        $('#datetimeEnd5').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            language: 'zh-CN',
+        });
+    </script>
+
+{% endblock %}
